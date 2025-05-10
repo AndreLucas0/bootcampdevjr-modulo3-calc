@@ -10,6 +10,10 @@ function calc(op) {
     case '/': output = num1 / num2; break;
   }
 
+  if (Number.isFinite(output) != true) {
+    output = "∞";
+  }
+  
   document.getElementById("output").value = output;
 
   var newhistory = "<p>" + num1 + " " + op + " " + num2 + " = " + output + "</p>";
